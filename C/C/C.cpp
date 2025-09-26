@@ -6,6 +6,7 @@ int main() {
 	SetConsoleOutputCP(1251);
 
 	//Task 1
+	/*
 	std::cout << "Task 1" << std::endl;
 	int num;
 	std::cout << "Введіть рік: ";
@@ -48,7 +49,62 @@ int main() {
 	}
 	std::cout << "Text" << std::endl;
 
+	std::cout << "\033[0m";
+	*/
+	//Task 3
 
+	int a;
+	int b;
+	std::cout << "Довжина: ";
+	std::cin >> a;
+	std::cout << "Ширина: ";
+	std::cin >> b;
+
+	char sym;
+	int color;
+	std::cout << "Символ: ";
+	std::cin >> sym;
+	std::cout << "Колір 1 - Червоний 2 - Жовтий 3 - Синій: ";
+	std::cin >> color;
+	for (int i = 0; i < a; i++) {
+		for (int j = 0; j < b; j++) {
+			if (i == 0 || i == a - 1) {
+				if (color == 1) {
+					std::cout << "\033[0;31m" << sym;
+				}
+				else if (color == 2) {
+					std::cout << "\033[0;33m" << sym;
+				}
+				else if (color == 3) {
+					std::cout << "\033[0;34m" << sym;
+				}
+				else {
+					std::cout << sym;
+				}
+			}
+			else {
+				if (j == 0 || j == b - 1) {
+					if (color == 1) {
+						std::cout << "\033[0;31m" << sym;
+					}
+					else if (color == 2) {
+						std::cout << "\033[0;33m" << sym;
+					}
+					else if (color == 3) {
+						std::cout << "\033[0;34m" << sym;
+					}
+					else {
+						std::cout << sym;
+					}
+				}
+				else {
+					std::cout << " ";
+				}
+			}
+			
+		}
+		std::cout << std::endl;
+	}
 
 
 

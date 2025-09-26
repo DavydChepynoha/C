@@ -1,2 +1,3 @@
 ﻿  C.cpp
+C:\Users\user.DC\source\repos\C\C\C.cpp(110,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   C.vcxproj -> C:\Users\user.DC\source\repos\C\x64\Debug\C.exe

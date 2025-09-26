@@ -6,7 +6,7 @@ int main() {
 	SetConsoleOutputCP(1251);
 
 	//Task 1
-	/*
+
 	std::cout << "Task 1" << std::endl;
 	int num;
 	std::cout << "Введіть рік: ";
@@ -18,6 +18,7 @@ int main() {
 	else {
 		std::cout << num << " рік: 365 днів" << std::endl;
 	}
+	std::cout << "\033[0m";
 	//Task2
 
 	int num1;
@@ -50,7 +51,7 @@ int main() {
 	std::cout << "Text" << std::endl;
 
 	std::cout << "\033[0m";
-	*/
+
 	//Task 3
 
 	int a;
@@ -105,9 +106,33 @@ int main() {
 		}
 		std::cout << std::endl;
 	}
+	//Task 4
+	srand(time(0));
+	int size;
+	std::cout << "Введіть розмір масиву: ";
+	std::cin >> size;
+	if (size > 500) {
+		std::cout << "Багато символів" << std::endl;
+		size = 500;
+	}
+	int* arr = new int[size];
+	for (int i = 0; i < size; i++) {
+		arr[i] = rand() % 100;
+	}
+	int max = arr[0];
+	int min = arr[0];
 
-
-
-	std::cout << "\033[0m";
+	for (int i = 0; i < size; i++) {
+		if (arr[i] > max) {
+			max = arr[i];
+		}
+		else if (arr[i] < min) {
+			min = arr[i];
+		}
+		std::cout << arr[i] <<" ";
+	}
+	std::cout << std::endl;
+	std::cout << "Максимальне: " << max<<std::endl;
+	std::cout << "Мінімальне: " << min << std::endl;
 	return 0;
 }
